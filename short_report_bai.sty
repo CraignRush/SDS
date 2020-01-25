@@ -1,0 +1,48 @@
+% This .sty file provides some basic formatting (logo, name, page#, ...)
+% It is useful for homework or short reports without a title page.
+
+\ProvidesPackage{short_report_bai}
+
+\RequirePackage{graphicx}               % include graphics
+\RequirePackage[                        % narrower margins than default
+    a4paper,
+    includefoot,
+    bottom=30mm,
+]{geometry}
+
+\usepackage[                            % captions that look different from text
+	margin=.1\textwidth,
+	labelfont={sc, small},              % small capitals
+	labelsep=endash, 
+	font={small},
+]{caption}
+
+\RequirePackage{fancyhdr}               % fancyheaders
+ \fancyhf{}                             % clears all header and footer fields
+ \pagestyle{fancy}                      % applies 'fancy' style to current document
+
+ \setlength{\headheight}{15pt}          % height of area reserved for headers
+ \setlength{\headsep}{10pt}             % distance between header and top of text
+ \renewcommand{\headrulewidth}{.4pt}    % thin separating line under headers
+ \renewcommand{\footrulewidth}{0pt}     % no separating line on footers
+ \fancyhead[R]{\rightmark}              % subsection name
+ \fancyfoot[L]{\thepage}                % page number
+ 
+ \fancypagestyle{firstpage}{            % defines an additional style for first page
+     \setlength{\headheight}{35pt}      % with a larger header,
+     \fancyhead[L]{                     % and a BAI logo,
+         \includegraphics[height=30pt]{bilder/bai-tum}
+     }
+     \fancyhead[R]{                     % and a TUM logo
+         \includegraphics[height=24pt]{bilder/TUM-Logo}
+     }                   
+ }
+
+
+% Do not include the section number in subsection
+\renewcommand{\thesubsection}{\arabic{subsection}}
+% Do not inclide the subsection number in the page header
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+
+% Applies the firstpage-style to the next (the first) page.
+\thispagestyle{firstpage}
