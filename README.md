@@ -11,7 +11,7 @@ Hence, I do not represent, warrant, undertake or guarantee:
 
 
  	
-##Feedback
+## Feedback
 Figure 3:
 a sine wave should have only 1 peak in spectrum. in your plot there are some side lobes as well. Probably you did not cut the zeros befor and after the sine wave (It was mentioned in the exercise to do that!).
 The peak amplitude is also not correct. It should be 100 nm and not around 60 nm.
