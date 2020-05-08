@@ -10,3 +10,11 @@ Hence, I do not represent, warrant, undertake or guarantee:
 - in particular, that by using the guidance in the report you will pass the subject "Systemtheorie der Sinnesorgane" at TUM.
 
 
+## Feedback 	
+
+Abb1 ist nicht korrekt, daher ist auch Abb2 nicht korrekt
+Außerdem schwingt eine Funktion cos(3*t) nicht mit 3Hz. cos(2*pi*3*t) aber schon!
+--> Betrifft 1) &2)
+
+Das 2D Filter muss kreisförmig sein!
+F = (fx,fy) => sqrt(fx²+fy²) = Frequenz < 0.13 --> Kreisgleichung (x²+y²=r²)
